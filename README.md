@@ -58,6 +58,7 @@ There are 4 directories in this repo:
 				 also contains combined forecasts in .npy file formats after stacking or averaging. Additionally, holds a 180 x N x 24 array of predictions which can be used for uncertainty analysis.
 		c. Driver Code.py | Script used to prepare data, make forecasts, and save forecasts. ***PRIMARILY USED FILE***
 		d. MV-MLE Stacking Weights.npy | Array of size 180 which stores the weights used to combine models in a stacking approach. Created using original validation data. *Unused if user combines models with averaging*
+  		e. Model Stacking.py | Script which serves as the method to create weights associated with the stacking algorithm. Uses Linear Regression to create MV-MLE Stacking Weights.npy (can be altered for Univariate work as well)
 
 	3. Trained Models/ | Directory containing the various models associated with the UV-MLE and MV-MLE approaches. Models were trained using striped sampling with a validation set and saved in .h5 format. 
 		a. Multivariate/ | Directory containing the models used for simultaneous (4 driver) forecasting over a 6 day horizon. Models are separated into directories based on lookback (i.e. input dimension) ...
